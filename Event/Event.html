@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTO MANIA 1.0 | Chandigarh University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0c1021, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px 100px;
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    }
+
+    .header-logos {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-logos img {
+      height: 70px;
+      width: auto;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 5px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 3px;
+      color: #00e0ff;
+      text-shadow: 0 0 20px #00e0ff;
+      margin-top: 40px;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+
+    /* ---------- EVENT DETAILS ---------- */
+    .event-details {
+      text-align: center;
+      margin: 60px auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .event-details h2 {
+      font-size: 2rem;
+      color: #00e0ff;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .event-details p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #dcdcdc;
+    }
+
+    .date {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #00ff88;
+    }
+
+    .venue {
+      margin-top: 10px;
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .prizes {
+      margin-top: 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .prizes h3 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    .prizes p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    /* ---------- PROBLEM STATEMENTS ---------- */
+    .problem-section {
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .problem-section h2 {
+      text-align: center;
+      color: #00e0ff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .problem {
+      max-width: 900px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    }
+
+    .problem h3 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    .problem p {
+      color: #e0e0e0;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    /* ---------- QR SECTION ---------- */
+    .qr-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 50px 20px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .qr-box {
+      text-align: center;
+    }
+
+    .qr-box img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      border: 2px solid #00e0ff;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .qr-box p {
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq {
+      background: rgba(255,255,255,0.05);
+      padding: 60px 20px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      color: #00e0ff;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .faq-item h3 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #00e0ff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 30px;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+
+    .contact-box h3 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      background: #010a18;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.3rem; }
+      .header-logos img { height: 50px; }
+      .qr-section, .contact-section { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-logos">
+      <img src="C:\Users\dell\Pictures\Screenshots\CU logo.png" alt="CU Logo" />
+      <img src="C:\Users\dell\Pictures\Screenshots\Event logo.png" alt="Tech Event Logo" />
+    </div>
+    <h1>PROTO MANIA 1.0</h1>
+    <p>Ignite Ideas. Build the Future!</p>
+  </header>
+
+  <section class="event-details">
+    <h2>About the Event</h2>
+    <p>
+      Unleash your creativity and innovation — design prototypes that push the boundaries of 
+      <strong>AI, sustainability, and human impact</strong>. Join us at Chandigarh University for an exciting challenge 
+      that brings together bright minds and groundbreaking ideas!
+    </p>
+    <p class="date">📅 31st October 2025</p>
+    <p class="venue">📍 Venue: Block D8, Main Campus, Ground Floor</p>
+
+    <div class="prizes">
+      <h3>🏆 Winner Prizes</h3>
+      <p><strong>1st Prize:</strong> ₹10,000</p>
+      <p><strong>2nd Prize:</strong> ₹5,000</p>
+      <p><strong>3rd Prize:</strong> ₹3,000</p>
+    </div>
+  </section>
+
+  <section class="problem-section">
+    <h2>Problem Statements</h2>
+
+    <div class="problem">
+      <h3>Problem Statement 1: Flood Management using AI</h3>
+      <p>Floods are among the most destructive natural disasters... (same description as before)</p>
+    </div>
+
+    <div class="problem">
+      <h3>Problem Statement 2: Smart Farming using IoT and AI</h3>
+      <p>Modern agriculture struggles with water scarcity... (same description as before)</p>
+    </div>
+
+    <div class="problem">
+      <h3>Problem Statement 3: AI-IoT based Cardiac Health Monitoring</h3>
+      <p>Traditional healthcare systems largely rely on periodic checkups... (same description as before)</p>
+    </div>
+
+    <div class="problem">
+      <h3>Problem Statement 4: AI-IoT based Traffic Management System</h3>
+      <p>Urban areas worldwide are facing increasing traffic congestion... (same description as before)</p>
+    </div>
+  </section>
+
+  <section class="qr-section">
+    <div class="qr-box">
+      <img src="C:\Users\dell\Pictures\Screenshots\What QR.png" alt="WhatsApp Group QR" />
+      <p>Join WhatsApp Group for More Info</p>
+    </div>
+    <div class="qr-box">
+      <img src="C:\Users\dell\Pictures\Screenshots\Registration logo.png" alt="Registration QR" />
+      <p>Scan to Register</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Who can participate?</h3>
+      <p>All university and college students passionate about technology, AI, and innovation can participate.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is there any registration fee?</h3>
+      <p>No, participation is completely free.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do participants get certificates?</h3>
+      <p>Yes, all participants will receive e-certificates, and winners will get exciting prizes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How to register?</h3>
+      <p>Scan the registration QR code above and fill in your details in the provided form.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Details</h2>
+    <div class="contact-section">
+      <div class="contact-box">
+        <h3>Student Coordinators</h3>
+        <p>Rahul Sharma – +91 98765 43210</p>
+        <p>Anjali Mehta – +91 98765 67890</p>
+      </div>
+      <div class="contact-box">
+        <h3>Faculty Coordinators</h3>
+        <p>Dr. Neha Gupta – neha.gupta@cuchd.in</p>
+        <p>Prof. Arjun Singh – arjun.singh@cuchd.in</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Chandigarh University | Tech Invent | The Code Forge
+  </footer>
+</body>
+</html>
